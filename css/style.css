@@ -1,12 +1,15 @@
 /*Обнуление*/
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-family: sans-serif;
+    font-family: Roboto Slab;
 }
 
 
@@ -51,9 +54,10 @@ body {
 		padding-left: 15px;
 		padding-right: 15px;
     }
-    .scroll-down {
-        margin-right: 500px;
+    .social_site{
+        display:none;
     }
+    
 }
 
 .logo {}
@@ -76,7 +80,10 @@ body {
 @media (max-width: 1200px) {
 	.nav {
 		display: none;
-	}
+    }
+    .social_site{
+        display:none;
+    }
 }
 
 .nav__item {
@@ -224,206 +231,6 @@ body {
 	color: rgb(240, 243, 49);
 }
 
-/*------SCROLL DOWN */
-@-webkit-keyframes pulse {
-    0% {
-      opacity: 0;
-      background-position: center top;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-    10% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      -moz-background-size: 75% auto;
-      -o-background-size: 75% auto;
-      -webkit-background-size: 75% auto;
-      background-size: 75% auto;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-      background-position: center bottom;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-  }
-  @-moz-keyframes pulse {
-    0% {
-      opacity: 0;
-      background-position: center top;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-    10% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      -moz-background-size: 75% auto;
-      -o-background-size: 75% auto;
-      -webkit-background-size: 75% auto;
-      background-size: 75% auto;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-      background-position: center bottom;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-  }
-  @-ms-keyframes pulse {
-    0% {
-      opacity: 0;
-      background-position: center top;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-    10% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      -moz-background-size: 75% auto;
-      -o-background-size: 75% auto;
-      -webkit-background-size: 75% auto;
-      background-size: 75% auto;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-      background-position: center bottom;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-  }
-  @keyframes pulse {
-    0% {
-      opacity: 0;
-      background-position: center top;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-    10% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      -moz-background-size: 75% auto;
-      -o-background-size: 75% auto;
-      -webkit-background-size: 75% auto;
-      background-size: 75% auto;
-    }
-    90% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-      background-position: center bottom;
-      -moz-background-size: 0 auto;
-      -o-background-size: 0 auto;
-      -webkit-background-size: 0 auto;
-      background-size: 0 auto;
-    }
-  }
-  body {
-    background-color: #0d74ff;
-  }
-  
-  .scroll-down {
-    margin: 0;
-    border: 2px solid #fff;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 55px;
-    height: 55px;
-    margin-left: -50px;
-    margin-top: 230px;
-  }
-  .scroll-down a {
-    display: block;
-    opacity: 0;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    -moz-background-size: 0 auto;
-    -o-background-size: 0 auto;
-    -webkit-background-size: 0 auto;
-    background-size: 0 auto;
-    -webkit-animation: pulse 1.5s 0s infinite normal ease forwards;
-    -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
-    -o-animation: pulse 1.5s 0s infinite normal ease forwards;
-    animation: pulse 1.5s 0s infinite normal ease forwards;
-    background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");
-    background-repeat: no-repeat;
-  }
-  .scroll-down a:before, .scroll-down a:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg") no-repeat center top;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
-    background-size: 100% auto;
-  }
-  .scroll-down a:before {
-    -webkit-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-    -moz-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-    -o-animation: pulse 1.5s 0.25s infinite normal ease forwards;
-    animation: pulse 1.5s 0.25s infinite normal ease forwards;
-  }
-  .scroll-down a:after {
-    -webkit-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-    -moz-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-    -o-animation: pulse 1.5s 0.5s infinite normal ease forwards;
-    animation: pulse 1.5s 0.5s infinite normal ease forwards;
-  }
-  .scroll-down a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
 
 /*----------Particles--------*/
 .particles {
@@ -432,3 +239,132 @@ body {
     background-color: rgb(16,14,23);
 }
 
+/*------Scroll Down Button*/
+.ScrollDown {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    
+  }
+  
+  .ScrollDown_box {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    margin-left: -50px;
+    top: 83%;
+  }
+  a.btn_ScrollDown {
+    display: block;
+    padding-top: 84px;
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    
+  }
+  a.btn_ScrollDown span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 1.5s infinite;
+    animation: sdb 1.5s infinite;
+    box-sizing: border-box;
+  }
+  a.btn_ScrollDown span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  a.btn_ScrollDown span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+  a.btn_ScrollDown span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  @-webkit-keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+/*SCROLLBAR*/
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}}
+::-webkit-resizer { background-color: #666;}
+/*------SOCIAL LINKS-------*/
+.social_site{
+    list-style-type: none;
+    margin-top:8%;
+}
+.social_link:hover{
+    transform: scale(1.2); /* Увеличиваем масштаб */
+}
+.social_link{
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    margin-top: 10px;
+    transition: 0.4s;
+}
+.social_site a{
+    text-decoration: none;
+    
+
+}
+.link__vk{
+    margin-left:5px;
+    margin-top:13px;
+    color: rgb(14, 88, 184);
+}
+.link__inst{
+    margin-left:14px;
+    margin-top:12px;
+    color: black;
+}
+.link__fb{
+    margin-left:19px;
+    margin-top:12px;
+    color: rgb(31, 89, 197);
+}
+.link__git{
+    margin-left:12px;
+    margin-top:11px;
+    color: rgb(124, 15, 187);
+}
