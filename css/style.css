@@ -6,11 +6,7 @@
 * {
 	box-sizing: border-box;
 }
-:root {
-	--primary-color: #e50914;
-	--dark-color: #141414;
-	--light-color: #f4f4f4;
-}
+
 body {
 	margin: 0;
 	font-family: Roboto Slab;
