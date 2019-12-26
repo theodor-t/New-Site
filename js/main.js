@@ -7,5 +7,3 @@ menuToggle.onclick = function(){
     mobileNavContainer.classList.toggle('mobile-nav--active');
 }
 
-
-
