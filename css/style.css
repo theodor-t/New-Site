@@ -1,165 +1,195 @@
+/*Обнуление*/
 *{
-    padding: 0;
+    box-sizing: border-box;
+}
+body{
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: sans-serif;
 }
-body, html{
-    overflow-x: hidden;
+/*HEADER*/
+.header{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    background-color: cadetblue;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
-nav{
-    margin: 0 auto;
-    max-width: 1100px;
-    width: 100%;
-}
-#checkbox-menu,
-.toggle{
-    display:none;
-}
-
-.menu{
-    padding: 0;
-    margin: 0;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-}
-.menu li a{
-    color:#000;
-    text-decoration: none;
-    align-self: center;
-    font-size: 13px;
-    padding: 10px 15px;
-    transition: background .2s linear;
-}
-.menu li a:hover{
-    background: #ffcc01;
-    border-radius: 3px;
-}
-.menu li a.logo{
-    font-size: 25px;
-    margin-right: 240px;
-}
-.menu li a.contacts{
-    margin-right: 100px;
-}
-.wrapper{
-    margin: 0 auto;
-    max-width: 1100px;
-    width: 100%;
-}
-.intro{
-    margin-top: 25px;
-    display: flex;
-    justify-content: flex-end;
-}
-.intro-img{
-    background-image: url(../img/wrap.jpg);
-    width: 965px;
-    height: 640px;
-}
-.intro .intro-text{
+.header_overlay{
     position: absolute;
-    font-size: 62px;
-    right: 750px;
-    top: 220px;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 90, 69, 0.5);
 }
-.intro-contacts{
-    background-color: #ffcc01;
-    max-width: 590px;
-    position: absolute;
-    right: 170px;
-    top: 638px;
+.nav-container{
     display: flex;
     justify-content: space-between;
-    padding: 30px 50px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:50px ;
+    
 }
-.intro-contacts i{
+/*------------------Условие для экранов от 0 до 768px------------*/
+@media (max-width: 768px){
+    .nav-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+}
+.logo{
+    
+}
+.nav-wrapper{
+
+}
+/*------------------DESKTOP NAVIGATION------------*/
+
+.nav{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+/*------------------Условие для экранов от 0 до 1200px------------*/
+@media (max-width: 1200px) {
+    .nav{
+        display:none;
+    }
+}
+
+.nav__item{
+    margin-right: 50px;
+}
+.nav__item:last-child{
+    margin-right: 0px;
+}
+.nav__link{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+.nav__link:hover{
+    color: rgb(255, 102, 0);
+}
+
+/*------------------MOBILE NAVIGATION------------*/
+.menu-icon {
+      z-index: 19;
+      position: relative;
+      display: none;
+      width: 30px;
+      height: 30px;
+      
+    }
+    /*------------------Условие для экранов от 0 до 1200px------------*/
+    @media (max-width: 1200px) {
+    .menu-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+}
+    
+    .menu-icon-line {
+      position: relative;
+      width: 30px;
+      height: 5px;
+      background-color: black;
+    }
+    
+    .menu-icon-line::before {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background-color: black;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    
+    }
+    
+    .menu-icon-line::after {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      content: '';
+      width: 30px;
+      height: 5px;
+      background-color: black;
+      transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    
+    }
+    
+    .menu-icon.menu-icon-active .menu-icon-line {
+      background-color: transparent;
+    }
+    
+    .menu-icon.menu-icon-active .menu-icon-line::before {
+      transform: rotate(45deg);
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+    
+    .menu-icon.menu-icon-active .menu-icon-line::after {
+      transform: rotate(-45deg);
+      top: 0;
+      transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    }
+
+/*------------------MOBILE NAVIGATION RIGHT------------*/
+.mobile-nav{
+    z-index: 9;
+    display: block;
+    position: absolute;
+    right: -350px;
+    top: 0;
+    height: 100%;
+    width: 350px;
+    padding: 50px;
+    background-color: rgba(16, 53, 34, 0.8);
+    transition: transform 0.4s ease-in;
+}
+/*------------------Условие для экранов от 0 до 768px------------*/
+@media (max-width: 768px){
+    .mobile-nav{
+        width: 320px;
+        right: -320px;
+    }
+}
+.mobile-nav--active{
+    transform: translateX(-100%);
+}
+.mobile-nav__title{
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: rgb(240, 243, 49);
+}
+.mobile-nav__list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.mobile-nav__item{
+    margin-bottom: 30px;
+}
+.mobile-nav__link{
     color: #fff;
-    margin-right: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
 }
-.intro-contacts p{
-    font-size: 18px;
-    margin-right: 60px;
-}
-@media screen and (max-width: 765px) {
-    .toggle{
-        clear:both;
-        display: block;
-        text-align: center;
-        font-size: 18px;
-        line-height: 40px;
-        width: 100%;
-        color:#000;
-        background: #ffcc01;
-        transition: all .1s linear;
-    }
-    .toggle:hover{
-        background: #d3a900;
-    }
-    #checkbox-menu:checked + label .touch li {
-        opacity: 1;
-        visibility: visible;
-        transition: all .7s linear;
-    }
-    #checkbox-menu:checked + label .touch {
-        height: 350px;
-    }
-    .menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 0px;
-        transition: height .3s linear;
-    }
-    .menu li {
-        display: flex;
-        align-self: center;
-        width: 95%;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .menu li a{
-        width: 95%;
-        text-align: center;
-        align-self: center;
-        align-content: center;
-    }
-    .menu li a.logo{
-        font-size: 21px;
-        margin-right: 0px;
-    }
-    .menu li a.contacts{
-        margin-right:0px;
-    }
-    .intro{
-        margin-top: 0;
-        display: block;
-        max-width: 100%;
-    }
-    .intro-img{
-        background-position: bottom 50px right 570px;
-    }
-    .intro .intro-text{
-        position: relative;
-        font-size: 35px;
-        right: -10px;
-        top:95px;
-    }
-    .intro .intro-contacts{
-        right: 0;
-        top:-60px;
-        padding: 20px 10px;
-        position: relative;
-    }
-    .intro-contacts i{
-        margin-right: 10px;
-    }
-    .intro-contacts p{
-        font-size: 13px;
-    }
-    margin-right: 0;
+.mobile-nav__link:hover{
+    color:rgb(240, 243, 49) ;
 }
