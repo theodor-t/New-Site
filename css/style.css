@@ -6,15 +6,12 @@ body {
     margin: 0;
     padding: 0;
 }
-.sidebar {
-    grid-area: sidebar;
-  }
-  
+
+ 
   .content {
     grid-area: content;
     position: relative;
   }
-  
   .header {
     grid-area: header;
   }
@@ -25,11 +22,11 @@ body {
   
   .wrapper {
           display: grid;
-      grid-gap: 10px;
+         
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-areas:
           "header  header  header"
-          "sidebar content content"
+          "content content content"
           "footer  footer  footer";
           background-color: #fff;
           color: #444;
@@ -37,16 +34,16 @@ body {
   
   
   .box {
-    background-color: #444;
     color: #fff;
     font-size: 150%;
   }
   
-  .header,
-  .footer {
-    background-color: #999;
+
+  .content {
+    background: url('../img/bg-neon.jpg');
   }
-  
+
+
   .topleft {
     position: absolute;
     top: 0;
@@ -57,7 +54,9 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-  }
+    width: 50%;
+    }
+  
   
   .bottomleft {
     position: absolute;
@@ -289,13 +288,6 @@ body {
 }
 
 
-/*----------Particles--------*/
-
-.particles {
-	width: 100%;
-	height: 100vh;
-	background-color: rgb(16, 14, 23);
-}
 
 
 /*------Scroll Down Button*/
@@ -485,4 +477,93 @@ a.btn_ScrollDown span:nth-of-type(3) {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s 2s, opacity 2s linear;
+}
+
+/*=========section GENERAL--------*/
+.container__about{
+    max-width: 1170px;
+    margin: 15px;
+}
+.welcome__text {
+    align-items: center;
+}
+
+/*FOOTER*/
+footer {
+    background: #eb2e4a;
+    padding: 30px 0;
+    color: #fff;
+}
+.about-us h4{
+	font-size:21px;
+}
+.tweets h4{
+	font-size:21px;
+}
+.tweets i{
+	color:black;
+}
+.contacts h4{
+	font-size:21px;
+}
+.contacts i{
+	color:black;
+}
+.footer-container {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35% 35% 25%;
+    grid-column-gap: 3%;
+}
+
+.about-us a {
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ffea00;
+    display: inline-block;
+}
+.about-us p{
+	font-size: 18px;
+}
+
+.contacts img {
+    margin-top: 15px;
+}
+.contacts p {
+    font-size: 18px;
+}
+
+
+.images {
+    margin-top: 10px;
+}
+
+.tweets p {
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+footer #social {
+    float: left;
+    width: 50%;
+    margin-top: 15px;
+}
+#social a{
+	margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.footer-container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 3%;
+    }
 }
