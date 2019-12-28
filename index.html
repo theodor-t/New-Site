@@ -67,7 +67,8 @@
             </header>
         </div>
         <div class="box content">
-            <div class="container__about">
+            <div class="container__about" id="welcome">
+                <div class="heading__text">Erlax Machines</div>
                 <div class="card-section">
                     <div class="card_features">
                         <h3 class="card-title-features">Почему именно мы?</h3>
@@ -93,7 +94,7 @@
                             <br> - Необходимо водительские права</p>
                     </div>
                 </div>
-
+                <div class="heading__text">Прайс-Лист</div>
                 <div class="card-section">
                     <div class="card_features">
                         <img class="card-img" src="img/econom.png" alt="">
@@ -112,7 +113,30 @@
                         <p class="card-price">от 59$</p>
                     </div>
                 </div>
-
+                <div class="heading__text">Оформите заказ прямо сейчас <i class="fas fa-file-signature"></i></div>
+                <div id="form-main">
+                    <div id="form-div">
+                      <form class="form" id="form1">
+                        
+                        <p class="name">
+                          <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Имя" id="name" />
+                        </p>
+                        
+                        <p class="email">
+                          <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Номер телефона" />
+                        </p>
+                        
+                        <p class="text">
+                          <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Сообщение"></textarea>
+                        </p>
+                        
+                        
+                        <div class="submit">
+                          <input type="submit" value="Заказать звонок" id="button-blue"/>
+                          <div class="ease"></div>
+                        </div>
+                      </form>
+                    </div>
             </div>
         </div>
 
