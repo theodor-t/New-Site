@@ -40,7 +40,8 @@ body {
   
 
   .content {
-    background: url('../img/bg-neon.jpg');
+	background: url('../img/bg-neon.jpg');
+	background-size: cover;
   }
 
 
@@ -482,11 +483,59 @@ a.btn_ScrollDown span:nth-of-type(3) {
 /*=========section GENERAL--------*/
 .container__about{
     max-width: 1170px;
-    margin: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
 }
-.welcome__text {
-    align-items: center;
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.container__about {	
+	margin-left: auto;
+    margin-right: auto;
+}
+.card-section {
+    margin-bottom: 50px;
+}
+
+.card_features {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title-features {
+    margin: 10px 0;
+}
+
+.card-img {
+    width: 128px;
+}
+
+.card-tag {
+    color: tomato;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+@media all and (min-width: 480px) {
+    h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+    .card-features {
+        margin: 20px;
+	}
+}	
+
 
 /*FOOTER*/
 footer {
