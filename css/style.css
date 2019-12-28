@@ -41,8 +41,7 @@ body {
 
   .content {
 	/* background: #f6f6f6; */
-	background: rgb(2,0,36);
-    background: linear-gradient(4deg, rgba(2,0,36,1) 0%, rgba(8,28,134,1) 0%, rgba(9,9,121,1) 0%, rgba(4,122,195,1) 0%, rgba(6,74,164,1) 20%, rgba(6,70,161,1) 40%, rgba(6,85,171,1) 53%, rgba(5,99,180,1) 65%, rgba(120,5,172,1) 100%, rgba(0,212,255,1) 100%);
+	background: rgb(243, 239, 239);
 	
 	
 
