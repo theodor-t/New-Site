@@ -11,4 +11,4 @@ loadData()
       preloaderEl.classList.remove('visible');
   });
 
-
+  
