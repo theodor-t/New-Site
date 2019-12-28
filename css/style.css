@@ -35,14 +35,13 @@ body {
   
   
   .box {
-    color: #fff;
     font-size: 150%;
   }
   
 
   .content {
-	background: url('../img/bg-neon.jpg');
-	background-size: cover;
+	background: #f6f6f6;
+
   }
 
 
@@ -488,10 +487,12 @@ a.btn_ScrollDown span:nth-of-type(3) {
 	margin-left: 15px;
 }
 .heading__text{
+	color:black;
 	margin-top: 15px;
 	text-align: center;
 	font-size: 35px;
 	font-weight: 600;
+	
 }
 .card-section {
     display: flex;
@@ -514,9 +515,13 @@ a.btn_ScrollDown span:nth-of-type(3) {
 }
 
 .card-title-features {
-    margin: 10px 0;
+	margin: 10px 0;
+	color:black;
 }
-
+.card-description{
+	font-size: 25px;
+	color:black;
+}
 .card-img {
     width: 128px;
 }
@@ -529,7 +534,8 @@ a.btn_ScrollDown span:nth-of-type(3) {
 
 .card-price {
     font-size: 2rem;
-    font-weight: bold;
+	font-weight: bold;
+	color:black;
 }
 @media all and (min-width: 480px) {
     h2 {
@@ -779,3 +785,46 @@ footer #social {
         grid-column-gap: 3%;
     }
 }
+
+/*==========BACK TO TOP BUTTON========*/
+#top {
+	display: inline-block;
+	background-color: #FF9800;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color .3s, 
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+  }
+  #top::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #top:hover {
+	cursor: pointer;
+	background-color: #333;
+  }
+  #top:active {
+	background-color: #555;
+  }
+  #top.show {
+	opacity: 1;
+	visibility: visible;
+  }
+  @media (min-width: 500px) {
+    #top {
+      margin: 30px;
+    }
+  }
